@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 bg-secondary-theme p-5 shadow-effect">
+      <h3 class="text-center text-theme-primary">New Categories</h3>
+      <p class="text-center text-white mb-5">Add new category!</p>
+      <form action="" class="form-inline text-center" #categoryForm="ngForm" (click)="onSubmit(categoryForm)">
+        <div class="col-md-10">
+          <input
+            type="text"
+            name="categories"
+            class="form-control shadow-effect"
+            placeholder="Add new category"
+            ngModel
+            #newCategory = 'ngModel'
+            required
+            [ngClass]="{'is-invalid': newCategory.touched && newCategory.invalid }"
+          />
+          <div class="alert alert-danger" *ngIf="newCategory.touched && newCategory.invalid">
+            Category field can not be empty!
+          </div>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-block btn-info btn-theme" [disabled]="categoryForm.invalid" >Add Category</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

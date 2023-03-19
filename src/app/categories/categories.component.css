@@ -1,0 +1,19 @@
+.form-control {
+  width: 100%;
+}
+.bg-secondary-theme {
+  border: none;
+  background-color: var(--secondary-color);
+}
+.btn-theme {
+  height: 58px;
+  border: none;
+  font-size: 13px;
+  background-color: var(--primary-color);
+}
+.text-theme-primary {
+  color: var(--primary-color);
+}
+input {
+  height: 58px;
+}
