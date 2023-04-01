@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 export class CategoriesService {
   constructor(
     private _fireStore: AngularFirestore,
-    private toastr: ToastrService
+    private _toastr: ToastrService
   ) {}
 
   saveData(data: any) {
@@ -16,7 +16,7 @@ export class CategoriesService {
       .collection('categories')
       .add(data)
       .then((docRef) => {
-        this.toastr.success('Data insert successfuly!');
+        this._toastr.success('Data insert successfuly!');
       })
       .catch((err) => {
         console.log(err);
@@ -45,7 +45,7 @@ export class CategoriesService {
       .doc(id)
       .update(EditData)
       .then((docRef) => {
-        this.toastr.success('Data edited successfuly!');
+        this._toastr.success('Data edited successfuly!');
       });
   }
   deleteData(id) {
@@ -54,7 +54,7 @@ export class CategoriesService {
       .doc(id)
       .delete()
       .then((docRef) => {
-        this.toastr.success('Data deleted successfuly!');
+        this._toastr.success('Data deleted successfuly!');
       });
   }
 }

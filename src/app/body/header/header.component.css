@@ -5,4 +5,11 @@ header {
   .site-logo {
     font-size: 1.5em;
   }
-  
+  .bg-secondary-theme {
+    background-color: var(--secondary-color);
+  }
+  .btn-theme {
+    height: 58px;
+    border: none;
+    background-color: var(--primary-color);
+  }
