@@ -73,15 +73,19 @@ export class NewPostComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._categoryService.loadData().subscribe((data) => {
-      this.categories = data;
-    });
+    this.loadCategoryData();
   }
 
   get fc() {
     return this.postForm.controls;
   }
 
+  loadCategoryData() {
+    this._categoryService.loadData().subscribe((data) => {
+      this.categories = data;
+    });
+  }
+  
   onTitleChange($event) {
     const title = $event.target.value;
     this.permalink = title.replace(/\s/g, '-');

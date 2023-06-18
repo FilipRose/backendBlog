@@ -8,15 +8,15 @@ import { CommentsService } from '../services/comments.service';
 })
 export class CommentsComponent implements OnInit{
 
-  comments: any
+  comments: Array<any>
 
   constructor(private _commentsService: CommentsService) {}
 
   ngOnInit(): void {
-    
+    this.loadCommentsList();
   }
 
-  loadSubsList() {
+  loadCommentsList() {
     this._commentsService.loadData().subscribe(val => {
       this.comments = val;
     });

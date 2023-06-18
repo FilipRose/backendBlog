@@ -3,8 +3,8 @@
         <div class="col-md-12">
            <div class="card shadow-effect bg-secondary-theme">
             <div class="card-body text-center">
-                <h3 class="text-theme-center">All Subscribers</h3>
-                <p>From here you can manage your subscribers.</p>
+                <h3 class="text-theme-center">All Comments</h3>
+                <p>From here you can manage your comments.</p>
                 <button class="btn btn-warning ml-2" routerLink="/">Back to Dashboard</button>
             </div>
            </div> 
@@ -18,14 +18,14 @@
                         <thead>
                             <th>No</th>
                             <th>Name</th>
-                            <th>Email</th>
+                            <th>Comment</th>
                             <th>Actions</th>
                         </thead>
                         <tbody>
                             <tr *ngFor="let comment of comments; let i = index">
                                 <td>{{i+1}}</td>
                                 <td>{{comment.data.name}}</td>
-                                <td>{{comment.data.email}}</td>
+                                <td>{{comment.data.comment}}</td>
                                 <td>
                                     <button class="btn btn-sm btn-danger ml-2" (click)="onDelete(comment.id)">Delete</button>
                                 </td>
