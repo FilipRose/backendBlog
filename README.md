@@ -1,27 +1,35 @@
-# BlogCms
+# BlogCMS Project Documentation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+The BlogCMS project is a backend application written in Angular that connects to the NoSQL Firebase database from Google. It serves as a management interface for the web application Programming Blog. In BlogCMS, we can add categories, posts, assign posts to categories, check subscriptions, and control comment content.
 
-## Development server
+## Project Description 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+BlogCMS is a backend tool that enables management of the Programming Blog web application. It acts as an intermediary between the user interface and the Firebase database. It allows for adding, editing, and deleting categories, posts, subscriptions, and managing comment content.
 
-## Code scaffolding
+## Technologies 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The BlogCMS project was implemented using the following technologies:
 
-## Build
+Angular: A JavaScript framework for building user interfaces.
+Firebase: A Google platform that offers solutions such as NoSQL database, authentication, hosting, and more.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Functionalities 
 
-## Running unit tests
+### Adding Categories 
+The "Adding Categories" feature allows BlogCMS users to add new categories for posts. Categories can help organize content and facilitate navigation for readers. The user can provide a name and an optional description for the category, and then save it to the Firebase database.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Adding Posts 
 
-## Running end-to-end tests
+The "Adding Posts" feature allows BlogCMS users to create new blog posts. The user can enter a title, post content, and optionally add an image illustrating the content. After creating the post, it is saved in the Firebase database.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Assigning Posts to Categories 
 
-## Further help
+The "Assigning Posts to Categories" feature allows BlogCMS users to categorize their posts. The user can choose an existing category or create a new one, and then assign the post to the selected category. This helps organize content and facilitates navigation for readers on the blog.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Checking Subscriptions 
+
+The "Checking Subscriptions" feature allows BlogCMS users to monitor subscribers of the Programming Blog web application. The user can view a list of subscribers, see their contact information, and optionally manage subscriptions.
+
+### Controlling Comment Content 
+
+The "Controlling Comment Content" feature allows BlogCMS users to moderate comments posted under the posts. The user can view a list of comments, approve or reject a comment, and remove inappropriate content. This helps maintain the quality of discussions and ensure high-quality content.
